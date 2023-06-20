@@ -19,6 +19,12 @@
   left: 50%;
   transform: translateX(-50%);
 }
+@mixin posBottomY {
+  @include pos;
+  top: 100%;
+  left: 100%;
+  transform: translateX(-100%);
+}
 @mixin posCenterY {
   @include pos;
   top: 50%;
