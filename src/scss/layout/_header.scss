@@ -13,7 +13,6 @@
   }
 
   @include desktop{
-      @include flexbox($direction:column, $items: flex-end);
       position: relative;
   }
 }
@@ -28,6 +27,11 @@
     height: 100%;
     background: url(/assets/images/webcafe-logo.png) no-repeat;
   }
+
+  @include desktop {
+    position: absolute;
+  }
+
 }
 
 // 멤버 서비스
@@ -43,5 +47,8 @@
 
 // 검색 폼
 .searchForm {
-
+  &__group {
+    text-align: right;
+    background: blue;
+  }
 }
