@@ -22,8 +22,7 @@
 @mixin posBottomY {
   @include pos;
   top: 100%;
-  left: 100%;
-  transform: translateX(-100%);
+  transform: translateY(-100%);
 }
 @mixin posCenterY {
   @include pos;
