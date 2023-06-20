@@ -58,10 +58,6 @@
   padding: rem($spacing);
 }
 
-@mixin margin($spacing) {
-  @include marginX;
-  @include marginY;
-}
 @mixin marginX($spacing) {
   margin-left: rem($spacing);
   margin-right: rem($spacing);
@@ -71,9 +67,9 @@
   margin-bottom: rem($spacing);
 }
 @mixin margin($spacing) {
-  margin: rem($spacing);
+  @include marginX;
+  @include marginY;
 }
-
 @mixin autoMargin {
   margin-left: auto;
   margin-right: auto;
