@@ -8,6 +8,13 @@
   @include mobile {
     background: $dark-brown;
     color: $white;
+
+    @include flexbox(column);
+  }
+
+  @include desktop{
+      @include flexbox($direction:column, $items: flex-end);
+      position: relative;
   }
 }
 
@@ -15,7 +22,7 @@
 .logo {
   width: rem(240px);
   height: rem(60px);
-  
+
   &__link {
     display: block;
     height: 100%;
@@ -27,4 +34,14 @@
 .memberOnly {
   background: green;
   @include flexbox($justify: flex-end);
+
+  @include mobile{
+    order: -1;
+  }
+}
+
+
+// 검색 폼
+.searchForm {
+
 }
