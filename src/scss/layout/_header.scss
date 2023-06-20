@@ -26,5 +26,5 @@
 // 멤버 서비스
 .memberOnly {
   background: green;
-  @include flexbox($justify: end);
+  @include flexbox($justify: flex-end);
 }
