@@ -1,5 +1,6 @@
 @use "./../utils/unit" as *;
 
+//position
 @mixin pos {
   position: absolute;
 }
@@ -36,12 +37,13 @@
   transform: translate(-50%, 50%);
 }
 
+// max width
 @mixin containerMax($max-width: 1024px) {
   max-width: rem($max-width);
   @include autoMargin;
 }
 
-
+// padding
 @mixin padding($spacing) {
   @include paddingX($spacing);
   @include paddingY($spacing);
@@ -58,7 +60,7 @@
   padding: rem($spacing);
 }
 
-
+// margin
 @mixin marginX($spacing) {
   margin-left: rem($spacing);
   margin-right: rem($spacing);
@@ -90,8 +92,15 @@
   aspect-ratio: $w / $h;
 }
 
-// 반응형 콘텐츠
+// 반응형 콘텐츠 : 이미지 포맷에 따라 한 번에 반응형 커버 가능한 코드
 @mixin respons($width: max-width, $height: auto) {
   #{$width}: 100%;
   height: $height;
+}
+
+// 말줄임표
+@mixin textOver {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
