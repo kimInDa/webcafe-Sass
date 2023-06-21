@@ -45,3 +45,27 @@
     grid-area: twitter;
   }
 }
+
+// 추천 서적
+.book {
+  
+}
+
+// 새소식
+.news {
+  @at-root .iframeWrapper {
+    @include ratio;
+  }
+}
+
+// 게시판
+.board {
+}
+
+// 인기 사이트
+.favorite {
+}
+
+// 트위터
+.twitter {
+} 
